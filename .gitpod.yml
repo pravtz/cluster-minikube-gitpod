@@ -1,0 +1,9 @@
+tasks:
+  - name: Install Minikube
+    init: ./install_minikube.sh
+  - name: Start Minikube
+    command: ./start_minikube.sh
+
+ports:
+  - port: 30000-32767
+    onOpen: notify
