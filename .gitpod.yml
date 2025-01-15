@@ -1,5 +1,5 @@
 tasks:
-- init: docker build -t getting-started .
+- init: docker build -f ./.gitpod.Dockerfile -t getting-started .
   command: docker run -dp 127.0.0.1:3000:3000 getting-started
 
 - name: Start Minikube

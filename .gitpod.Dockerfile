@@ -8,7 +8,6 @@ RUN sudo apt-get update && \
   conntrack \
   socat \
   iptables \
-  crictl \
   ebtables \
   ethtool
 
