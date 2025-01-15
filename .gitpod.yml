@@ -1,9 +1,11 @@
 tasks:
-  - name: Install Minikube
-    init: ./install_minikube.sh
-  - name: Start Minikube
-    command: ./start_minikube.sh
+- init: docker build -t getting-started .
+  command: docker run -dp 127.0.0.1:3000:3000 getting-started
+
+- name: Start Minikube
+  command: ./start_minikube.sh
 
 ports:
-  - port: 30000-32767
-    onOpen: notify
+- port: 3000 #30000-32767
+  onOpen: open-preview
+  visibility: private
