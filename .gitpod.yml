@@ -2,8 +2,9 @@ tasks:
 - init: docker build -f ./.gitpod.Dockerfile -t getting-started .
   command: docker run -dp 127.0.0.1:3000:3000 getting-started
 
-- name: Start Minikube
-  command: ./start_minikube.sh
+vscode:
+  extensions:
+  - ms-azuretools.vscode-docker
 
 ports:
 - port: 3000 #30000-32767
